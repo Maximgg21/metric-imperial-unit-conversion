@@ -42,14 +42,24 @@ function convertUnits(quanity, number, fixed=3) {
     }
 }
 
-let isBright = true;
 const main = document.getElementById("main");
 const mainContainer = document.getElementsByClassName("main-container");
 const mainContainerHeading = document.getElementsByClassName("main-container-heading");
 const body = document.getElementById("body");
+
+let isBright = true;
+if ((localStorage.getItem("isBright") && JSON.parse(localStorage.getItem("isBright")) === false) || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    changeModes();
+}
+
 changeModeBtn.addEventListener("click", function() {
+    changeModes();
+})
+
+function changeModes() {
     if (isBright) {
         isBright = false;
+        localStorage.setItem("isBright", "false");
         changeModeBtn.style.background = "hsla(215, 28%, 17%, 1)";
         main.style.background = "hsla(215, 28%, 17%, 1)";
         body.style.background = "#121212";
@@ -60,6 +70,7 @@ changeModeBtn.addEventListener("click", function() {
         }
     } else {
         isBright = true;
+        localStorage.setItem("isBright", "true");
         changeModeBtn.style.background = "white";
         main.style.background = "hsla(0, 0%, 96%, 1)";
         body.style.background = "white";
@@ -69,4 +80,4 @@ changeModeBtn.addEventListener("click", function() {
             mainContainerHeading[i].style.color = "hsla(250, 19%, 40%, 1)"
         }
     }
-})
+}
