@@ -46,11 +46,13 @@ let isBright = true;
 const main = document.getElementById("main");
 const mainContainer = document.getElementsByClassName("main-container");
 const mainContainerHeading = document.getElementsByClassName("main-container-heading");
+const body = document.getElementById("body");
 changeModeBtn.addEventListener("click", function() {
     if (isBright) {
         isBright = false;
         changeModeBtn.style.background = "hsla(215, 28%, 17%, 1)";
         main.style.background = "hsla(215, 28%, 17%, 1)";
+        body.style.background = "#121212";
         for (let i = 0; i < mainContainer.length; i++) {
             mainContainer[i].style.background = "hsla(215, 30%, 22%, 1)";
             mainContainer[i].style.color = "white";
@@ -60,6 +62,7 @@ changeModeBtn.addEventListener("click", function() {
         isBright = true;
         changeModeBtn.style.background = "white";
         main.style.background = "hsla(0, 0%, 96%, 1)";
+        body.style.background = "white";
         for (let i = 0; i < mainContainer.length; i++) {
             mainContainer[i].style.background = "white";
             mainContainer[i].style.color = "hsla(0, 0%, 21%, 1)";
