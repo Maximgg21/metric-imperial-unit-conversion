@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <title>Metric/Imperial Unit Conversion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <header>
+        <button class="change-mode-btn" id="change-mode-btn">🌙</button>
+        <h1>Metric/Imperial Unit Conversion</h1>
+        <input type="number" class="number-input" id="number-input" />
+        <button class="convert-btn" id="convert-btn">Convert</button>
+      </header>
+      <main id="main">
+        <div class="main-container" id="length-container">
+          <h2 class="main-container-heading">Length (Meter/Feet)</h2>
+          <p id="length-conversion"></p>
+        </div>
+        <div class="main-container" id="volume-container">
+          <h2 class="main-container-heading">Volume (Liters/Gallons)</h2>
+          <p id="volume-conversion"></p>
+        </div>
+        <div class="main-container" id="mass-container">
+          <h2 class="main-container-heading">Mass (Kilograms/Pounds)</h2>
+          <p id="mass-conversion"></p>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

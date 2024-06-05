@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero {
+    font-family: "Inter";  
+    width: 550px;
+    height: 729px;
+    margin: 10vh auto 0;
+}
+
+header {
+    height: 285px;
+    background: hsla(252, 100%, 63%, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    padding: 33px 0;   
+    position: relative;
+}
+
+header .change-mode-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 10%;
+    padding-bottom: 2px;
+}
+
+header h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 38px;
+    color: white;
+}
+
+header .number-input {
+    width: 120px;
+    height: 85px;
+    border-radius: 5px;
+    border: 2px solid hsla(256, 100%, 79%, 1);
+    background: hsla(252, 100%, 63%, 1);
+    color: white;
+    font-weight: 800;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+header button {
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 0px hsla(0, 0%, 0%, 0.05);
+}
+
+main {
+    background: hsla(0, 0%, 96%, 1);
+    height: 444px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main div {
+    background: white;
+    height: 110px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    color: hsla(0, 0%, 21%, 1);
+}
+
+main div h2 {
+    color: hsla(250, 19%, 40%, 1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+main div p {
+    height: 25px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media screen and (max-width: 675px) {
+    .hero {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+}
