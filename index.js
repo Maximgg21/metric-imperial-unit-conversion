@@ -42,7 +42,7 @@ function convertUnits(quanity, number, fixed=3) {
     }
 }
 
-const main = document.getElementById("main");
+const main = document.getElementById("main-section");
 const mainContainer = document.getElementsByClassName("main-container");
 const mainContainerHeading = document.getElementsByClassName("main-container-heading");
 const body = document.getElementById("body");

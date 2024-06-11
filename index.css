@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-
-.hero {
+main {
     font-family: "Inter";  
     width: 550px;
     height: 729px;
     margin: 10vh auto 0;
 }
 
-header {
+.top-section {
     height: 285px;
     background: hsla(252, 100%, 63%, 1);
     display: flex;
@@ -23,7 +22,7 @@ header {
     position: relative;
 }
 
-header .change-mode-btn {
+.top-section .change-mode-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -33,14 +32,14 @@ header .change-mode-btn {
     touch-action: manipulation;
 }
 
-header h1 {
+.top-section h1 {
     font-size: 1.7rem;
     font-weight: 800;
     line-height: 38px;
     color: white;
 }
 
-header .number-input {
+.top-section .number-input {
     width: 120px;
     height: 85px;
     border-radius: 5px;
@@ -60,7 +59,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
-header button {
+.top-section button {
     width: 120px;
     height: 45px;
     font-size: 1rem;
@@ -71,7 +70,7 @@ header button {
     touch-action: manipulation;
 }
 
-main {
+.main-section {
     background: hsla(0, 0%, 96%, 1);
     height: 444px;
     display: flex;
@@ -80,7 +79,7 @@ main {
     align-items: center;
 }
 
-main div {
+.main-section div {
     background: white;
     height: 110px;
     width: 90%;
@@ -92,14 +91,14 @@ main div {
     color: hsla(0, 0%, 21%, 1);
 }
 
-main div h2 {
+.main-section div h2 {
     color: hsla(250, 19%, 40%, 1);
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 20px;
 }
 
-main div p {
+.main-section div p {
     height: 25px;
     width: 100%;
     font-size: 1rem;
@@ -108,14 +107,14 @@ main div p {
 }
 
 @media screen and (max-width: 675px) {
-    .hero {
+    main {
         margin: 0;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 436px) {
-    header h1 {
+    .top-section h1 {
         font-size: 1.3rem;
     }
 }
